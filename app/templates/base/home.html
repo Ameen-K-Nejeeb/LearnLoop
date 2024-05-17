@@ -5,10 +5,15 @@
 
 <div>
 
+    <a href="{% url "create-Room" %}">Create Room</a>
+
     <div>
         {% for x in rooms %}
             <div>
+                <span>@{{x.host.username}}<span>
                 <h4>{{x.id}} --<a href= {% url 'room' x.id %} > {{x.name}} </a><h4>
+                <small>{{x.topic.name}}<small>
+                <hr>
             <div>
         {% endfor %}
     <div>
