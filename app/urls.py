@@ -5,6 +5,6 @@ urlpatterns = [
     path('',views.home,name="home"),
     path('room/<str:pk>/',views.room, name="room"),
 
-    path('create-Room/',views.createRoom ,name="create-room"),
+    path('create-Room/',views.createRoom ,name="create-Room"),
    
 ]
