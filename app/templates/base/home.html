@@ -10,7 +10,9 @@
     <div>
         {% for x in rooms %}
             <div>
-            <a href="{% url 'update-Room' x.id %}">Edit</a>
+                <a href="{% url 'update-Room' x.id %}">Edit</a>
+                <a href="{% url 'delete-Room' x.id %}">Delete</a>
+
                 <span>@{{x.host.username}}<span>
                 <p>{{x.id}} --<a href= {% url 'room' x.id %} > {{x.name}} </a><p>
                 <sma>{{x.topic.name}}<sma>
