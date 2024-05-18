@@ -14,7 +14,7 @@
     <div>
         <h3>Browse Topic</h3>
         <hr>
-
+        
         <div>
             <a href="{% url 'home' %}">All</a>
         </div>
@@ -29,14 +29,14 @@
     </div>
     <div>
             <div>
-                {% for x in rooms %}
+                {% for room in rooms %}
                     <div>
-                        <a href="{% url 'update-Room' x.id %}">Edit</a>
-                        <a href="{% url 'delete-Room' x.id %}">Delete</a>
+                        <a href="{% url 'update-Room' room.id %}">Edit</a>
+                        <a href="{% url 'delete-Room' room.id %}">Delete</a>
         
-                        <span>@{{x.host.username}}<span>
-                        <h6>{{x.id}} --<a href= {% url 'room' x.id %} > {{x.name}} </a></h6>
-                        <sma>{{x.topic.name}}<sma>
+                        <span>@{{room.host.username}}<span>
+                        <h6>{{room.id}} --<a href= "{% url 'room' room.id %}" > {{room.name}} </a></h6>
+                        <smal>{{room.topic.name}}<smal>
                         <hr>
                     </div>
                 {% endfor %}
@@ -45,7 +45,7 @@
 
 </div>
 
-    <a href="{% url "create-Room" %}">Create Room</a>
+    <a href="{% url 'create-Room' %}">Create Room</a>
 
 </div>
 
