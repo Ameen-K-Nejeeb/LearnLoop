@@ -6,7 +6,13 @@
 <form action="{% url 'home' %}">
     <input type="text" name="q" placeholder="search rooms...">
 </form>
+<p>Hello:{{request.user}}</p>
 
+{% if request.User.is_authenticated %}
+
+<a href="{% url 'logout' %}">Logout</a>
+{% else %}
 <a href="{% url 'login' %}">Login</a>
+{% endif %}
 
 <hr>
