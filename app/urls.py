@@ -16,3 +16,6 @@ urlpatterns = [
     path('delete-message/<str:pk>/ ',views.deleteMessages,name="delete-message"),
 
 ]
+"""
+added: path of title,html page was divided into different parts,profile were updated,
+"""
