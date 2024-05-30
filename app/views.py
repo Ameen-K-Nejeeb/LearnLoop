@@ -2,12 +2,11 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
 from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
 from .forms import RoomForm,UserForm
-from .models import Message, Room, Topic
+from .models import Message, Room, Topic,User
 
 # Create your views here.
 
