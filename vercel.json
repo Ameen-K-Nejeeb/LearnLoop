@@ -8,11 +8,6 @@
                 "runtime": "python3.12"
             }
         }
-    ],
-    "roures": [
-        {
-            "src": "/(.*)",
-            "dest": "main/wsgi.py"
-        }
     ]
+    
 }
