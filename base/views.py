@@ -63,7 +63,7 @@ def registerPage(request):
              login(request,user)
              return redirect('home')
          else:
-             messages.error(request,'An error occured Registration')
+             messages.error(request,'An error occured Registration, Check special character included in your password')
 
 
     context ={'form':form}
@@ -195,7 +195,7 @@ def deleteMessage(request,pk):
     if request.method == "POST":
         message.delete()
         return redirect('home')
-        
+
 
     return render(request, 'base/delete.html', {'obj':message})
 
