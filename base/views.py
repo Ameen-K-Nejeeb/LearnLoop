@@ -215,6 +215,7 @@ def updateUser(request):
     return render(request, 'base/update-user.html',context)
 
 
+
 def topicsPage(request):
     q = request.GET.get('q', '')
 
