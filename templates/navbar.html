@@ -1,8 +1,9 @@
 {% load static %}
+
 <header class="header header--loggedIn">
     <div class="container">
       <a href="{% url 'home' %}" class="header__logo">
-        <img src="{% static 'images/logo.svg' %}" />
+        <img style=" height: 42px; width: 42px;" src="{% static 'images/logos.png' %}" />
         <h1>LeanLoop</h1>
       </a>
       <form class="header__search" method="GET" action="{% url 'home' %}">
